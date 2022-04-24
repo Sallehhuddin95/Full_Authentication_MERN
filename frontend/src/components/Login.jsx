@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Axios from "axios";
 import "../styles/style.css";
+import "../styles/bootstrap-social.css";
 
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
@@ -19,6 +20,11 @@ function Login() {
       url: "http://localhost:4000/signin",
     }).then((res) => console.log(res));
   };
+
+  const loginGoogle = () => {
+    window.open("http://localhost:4000/auth/google/welcome", "_self");
+  };
+
   return (
     <div className="sign-in-div">
       <div className="container">
@@ -49,6 +55,20 @@ function Login() {
               Submit
             </button> */}
           </form>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <a
+                  class="btn btn-block btn-social btn-google"
+                  onClick={loginGoogle}
+                  role="button"
+                >
+                  <i class="fab fa-google"></i>
+                  Sign In with Google
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
