@@ -1,4 +1,18 @@
-This is a authentication app using: passport
+# Authentication App MERN
 
-Front-end : react
-backend : node.js
+## Description:
+
+The user can register or login to the app using local or Google authentication
+
+## Frontend:
+
+React and Bootstrap
+
+## Backend:
+
+Node.js
+Express
+
+## Database:
+
+Mongodb
