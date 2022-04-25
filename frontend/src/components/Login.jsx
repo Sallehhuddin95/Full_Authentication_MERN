@@ -1,8 +1,6 @@
 import React, { Component, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Axios from "axios";
-import "../styles/style.css";
-import "../styles/bootstrap-social.css";
+// import "../styles/style.css";
 
 function Login() {
   const [loginUsername, setLoginUsername] = useState("");
@@ -38,13 +36,13 @@ function Login() {
               placeholder="Username"
               type="text"
               onChange={(e) => setLoginUsername(e.target.value)}
-              className="form-control form-group my-3 w-50"
+              className="form-control form-group my-3"
             />
             <input
               placeholder="Password"
               type="password"
               onChange={(e) => setLoginPassword(e.target.value)}
-              className="form-control form-group my-3 w-50"
+              className="form-control form-group my-3"
             />
             <input
               type="submit"
@@ -55,19 +53,15 @@ function Login() {
               Submit
             </button> */}
           </form>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <a
-                  class="btn btn-block btn-social btn-google"
-                  onClick={loginGoogle}
-                  role="button"
-                >
-                  <i class="fab fa-google"></i>
-                  Sign In with Google
-                </a>
-              </div>
-            </div>
+          <div class="google-div">
+            <a
+              class="btn-block btn-google btn"
+              onClick={loginGoogle}
+              role="button"
+            >
+              <i class="fab fa-google"></i>
+              <p className="google-text">Sign In with Google</p>
+            </a>
           </div>
         </div>
       </div>

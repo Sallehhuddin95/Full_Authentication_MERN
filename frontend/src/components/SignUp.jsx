@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../styles/style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/bootstrap-social.css";
+// import "../styles/style.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "../styles/bootstrap-social.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Axios from "axios";
 
@@ -42,25 +42,25 @@ function SignUp() {
               placeholder="fullname"
               type="text"
               onChange={(e) => setRegisterFullname(e.target.value)}
-              className="form-control form-group my-3 w-50"
+              className="form-control form-group my-3"
             />
             <input
               placeholder="username"
               type="text"
               onChange={(e) => setRegisterUsername(e.target.value)}
-              className="form-control form-group my-3 w-50"
+              className="form-control form-group"
             />
             <input
               placeholder="email"
               type="text"
               onChange={(e) => setRegisterEmail(e.target.value)}
-              className="form-control form-group my-3 w-50"
+              className="form-control form-group my-3"
             />
             <input
               placeholder="password"
               type="password"
               onChange={(e) => setRegisterPassword(e.target.value)}
-              className="form-control form-group my-3 w-50"
+              className="form-control form-group my-3 col-sm-6 col-xs-6 "
             />
             <input
               type="submit"
@@ -69,20 +69,20 @@ function SignUp() {
             ></input>
             {/* <button onClick={register}>Submit</button> */}
           </form>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <a
-                  class="btn btn-block btn-social btn-google"
-                  onClick={registerGoogle}
-                  role="button"
-                >
-                  <i class="fab fa-google"></i>
-                  Sign Up with Google
-                </a>
-              </div>
-            </div>
+          <div className="google-div">
+            {/* <div class="card">
+              <div class="card-body"> */}
+            <a
+              class="btn-block btn-google btn"
+              onClick={registerGoogle}
+              role="button"
+            >
+              <i class="fab fa-google"></i>
+              <p className="google-text">Sign Up with Google</p>
+            </a>
           </div>
+          {/* </div>
+          </div> */}
         </div>
       </div>
     </div>
